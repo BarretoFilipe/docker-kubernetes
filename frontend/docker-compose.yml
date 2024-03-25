@@ -10,6 +10,8 @@ services:
         volumes:
             - /usr/app/node_modules
             - .:/usr/app
+# create this service bellow for run all the tests
+# or don't create this service bellow and use "docker exec -it {CONTAINER ID} npm run test" to menu with options
     tests:
         build:
             context: .
